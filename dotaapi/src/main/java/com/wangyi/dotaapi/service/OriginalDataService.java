@@ -4,6 +4,7 @@ import com.wangyi.dotaapi.dao.OriginalDataDao;
 import com.wangyi.dotaapi.domain.OriginalData;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,13 +16,19 @@ import java.util.List;
 @Service
 public class OriginalDataService {
 
-    @Autowired
+    private final
     OriginalDataDao originalDataDao ;
+
+    @Autowired
+    public OriginalDataService(OriginalDataDao originalDataDao) {
+        this.originalDataDao = originalDataDao;
+    }
 
     public List<OriginalData> getAllData(){
         return originalDataDao.getAll();
     }
 
+    @Cacheable(cacheNames = "originalData")
     public OriginalData getOneBySno(String sno){
 
         OriginalData res ;

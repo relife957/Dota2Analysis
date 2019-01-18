@@ -1,5 +1,6 @@
 package com.wangyi.dotaapi.domain;
 
+
 /**
  * @author wangyi
  * @create 2018-12-20 10:15 PM

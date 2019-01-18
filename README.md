@@ -1,6 +1,10 @@
 # Dota2Analysis
 A data analysis of dota2
 
+## 更新 2019-01-18
+- 修改了前端vue.js中调用api的代码
+- 修改了restful接口,添加了数据校验,合法输入但无数据的提示,添加了redis缓存
+
 ## 项目介绍
 这是关于刀塔2 plus 的数据分析模拟项目,集合数据获取,数据挖掘,数据分析,数据展示的全栈式项目.
 #### python数据获取

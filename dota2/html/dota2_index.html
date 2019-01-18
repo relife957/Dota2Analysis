@@ -59,18 +59,19 @@
             hero_3:"暂无",
             hero_4:"暂无",
             hero_5:"暂无",
-            cn_hero:{}
+            cn_hero:{},
+            all_group : []
         },
         mounted:function(){
             this.get_cn_hero_name() ;
         },
         methods:{
             get:function () {
-                var url = "http://localhost:3000/dota2?team=eq.".concat(this.team)
+                const url = "http://localhost:3000/dota2?team=eq.".concat(this.team);
                 this.$http.get(url).then(function (res) {
-                    var heros = res.data[0].recommend ;
-                    var hero_values = heros.split(" ");
-                    for (var i = 0 ; i < hero_values.length;i++){
+                    const heroes = res.data[0].recommend;
+                    const hero_values = heroes.split(" ");
+                    for (let i = 0 ; i < hero_values.length; i++){
                         switch (i){
                             case 0:
                                 this.hero_1 = this.cn_hero[hero_values[i]];
@@ -112,9 +113,33 @@
             show:function () {
                 alert(this.cn_hero['2'])
             },
-            get_arrangement:function (heroes) {
-                var hero_list = heroes.split(" ")
-
+            get_arrgement:function (heroes) {
+                // const heroes = "3 2 5 6";
+                const hero_list = heroes.split(" ");
+                var all = [] ;
+                let index = 0 ;
+                perm(hero_list,0,hero_list.length) ;
+                function perm(array,k,array_size) {
+                    if(k >= array_size){
+                        let res = "";
+                        for (let i = 0 ; i < array_size ;i++){
+                            res = res.concat(array[i]).concat(" ")
+                        }
+                        all[index++] = res.trim() ;
+                    }else{
+                        for(let i = k ; i < array_size ;i++){
+                            swap(array,k,i);
+                            perm(array,k+1,array_size);
+                            swap(array,k,i);
+                        }
+                    }
+                    function swap(array,i,j) {
+                        const temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                    }
+                }
+                this.all_group = all ;
             }
         }
     });

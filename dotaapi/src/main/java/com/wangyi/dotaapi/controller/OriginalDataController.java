@@ -1,6 +1,5 @@
 package com.wangyi.dotaapi.controller;
 
-import com.wangyi.dotaapi.Exception.ApiResult;
 import com.wangyi.dotaapi.domain.OriginalData;
 import com.wangyi.dotaapi.service.OriginalDataService;
 import org.apache.ibatis.exceptions.TooManyResultsException;
@@ -17,7 +16,7 @@ import java.util.List;
 @RequestMapping("/original")
 public class OriginalDataController {
 
-    OriginalDataService service ;
+    private OriginalDataService service ;
 
     @Autowired
     public void setService(OriginalDataService service) {

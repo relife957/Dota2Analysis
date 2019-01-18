@@ -15,7 +15,6 @@
     <script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"></script>
     <!--添加foxholder-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
     <style>
         a{
             font-family: Arial,Helvetica,sans-serif;
@@ -28,10 +27,7 @@
     </style>
 </head>
 <body>
-<canvas id="canvas"></canvas>
-<script src='../js/jreejo.js'></script>
-<script  src="../js/index.js"></script>
-<div class="container" id="app" style="position: absolute;left: 80px; top: 80px">
+<div class="container" id="app">
     <br>
     <br>
     <br>
@@ -67,8 +63,8 @@
     new Vue({
         el: '#app',
         data: {
-            id : 0,
-            kind : 0,
+            id : '',
+            kind : '',
             purchase_log : []
         },
         mounted:function(){
@@ -76,33 +72,17 @@
         },
         methods:{
             get:function () {
-                var url = "http://localhost:8080/purchase/recommand?id="
-                    .concat(this.id).concat("&kind=").concat(this.kind) ;
-                // axios.get(url, {
-                //     params: {
-                //         id:this.id,
-                //         kind : this.kind
-                //     }
-                // })
-                //     .then(function (response) {
-                //         console.log(response.json);
-                //     })
-                //     .catch(function (error) {
-                //         console.log(error);
-                //     });
-                this.$http.get(url).then(function (res) {
+                var url = "http://localhost:8080/purchase/recommend" ;
+
+                this.$http.get(url,{params:{id:this.id,kind:this.kind}}).then(function (res) {
                     this.purchase_log = res.data ;
 
                 },function (res) {
-                    console.log("failure")
+                    alert(res.data['status']);
                 });
             },
             show:function () {
                 alert(this.cn_hero['2'])
-            },
-            get_arrangement:function (heroes) {
-                var hero_list = heroes.split(" ")
-
             }
         }
     });
