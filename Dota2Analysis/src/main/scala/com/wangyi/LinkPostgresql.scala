@@ -101,14 +101,15 @@ object LinkPostgresql {
 						top5:collection.Map[Set[Int],Array[Int]],
 						freqItems: Array[String]
 				):Unit={
-		sc.parallelize(top5.toSeq.map(x=>{
-			(x._1.map(freqItems(_)).mkString(" "),x._2.map(freqItems(_)).mkString(" "))
+		sc.parallelize(top5.toSeq.filter(!_._1.contains(0)).map(x=>{
+			(x._1.toSeq.sorted.mkString(" "),x._2.sorted.mkString(" "))
 		})).repartition(1).saveAsTextFile(output+"top5")
 	}
 	
 	def readAsRDD(sc: SparkContext,
 				  path: String): RDD[Array[String]] = {
-		val dataRDD = sc.textFile(path + "data.dat", sc.defaultParallelism * 4).filter(!_.equals("0")).map(_.trim().split(","))
+		val dataRDD = sc.textFile(path + "data.dat", sc.defaultParallelism * 4)
+				.filter(!_.equals("0")).map(x=>x.trim().substring(1,x.length-1).split(","))
 				.persist(StorageLevel.MEMORY_AND_DISK_SER)
 		//    val userRDD = sc.textFile(path + "U.dat", sc.defaultParallelism * 4).map(_.trim().split("\\s+"))
 		//      .persist(StorageLevel.MEMORY_AND_DISK_SER)
@@ -117,10 +118,10 @@ object LinkPostgresql {
 	}
 	
 	def saveFreqItemset(
-							   sc: SparkContext,
-							   output: String,
-							   freqItemsets: Array[(Set[Int], Int)],
-							   freqItems: Array[String]
+					   sc: SparkContext,
+					   output: String,
+					   freqItemsets: Array[(Set[Int], Int)],
+					   freqItems: Array[String]
 					   ): Unit = {
 		val freqItemsBV = sc.broadcast(freqItems)
 		sc.parallelize(freqItemsets).map { f =>

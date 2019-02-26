@@ -32,7 +32,7 @@ class FastApriori(private var minSupport: Double, private var numPartitions: Int
     val partitioner = new HashPartitioner(numParts)
 
     val count = data.count()
-    val minCount = 1     //将数字向上取整,代表最小支持度
+    val minCount = 1    //将数字向上取整,代表最小支持度
     val (freqItemsWithCount, freqItems, itemToRank, newData, countMap, totalCount) = genFreqItems(sc, data, minCount, partitioner)
     val freqItemsets = genFreqItemsets(sc, newData, countMap, totalCount, minCount, freqItems) ++ freqItemsWithCount
 
@@ -136,13 +136,6 @@ class FastApriori(private var minSupport: Double, private var numPartitions: Int
 	  * 然后判断这个集合是不是频繁集,如果是就将y加入到另一个集合ys中,最后返回xs和ys (以上是getcandidate方法的作用),这杨做的目的就是
 	  * 减少两个0-1数组做运算的次数,虽然xs和ys中的元素组成的k+1项组合就是频繁的,但被过滤掉的就肯定不是频繁集,根据Apriori定理,频繁集的子集都是频繁集,
 	  * 也就是说,如果某k项频繁集a不是频繁集,那么任何元素和a的组合得到的k+1项频繁集b就肯定不是频繁集.
- 	  * @param sc
-	  * @param candidates
-	  * @param countMapBV
-	  * @param freqItemsTransBV
-	  * @param freqItemsSize
-	  * @param totalCount
-	  * @param minCount
 	  * @return
 	  */
   private def genNextFreqItemsets(sc: SparkContext,
@@ -155,7 +148,7 @@ class FastApriori(private var minSupport: Double, private var numPartitions: Int
 
     val res = sc.parallelize(candidates).flatMap { case (subSet, items) =>
       val countMap = countMapBV.value
-      val freqItemsTrans = freqItemsTransBV.value
+      val freqItemsTrans = freqItemsTransBV.value                     //每个英雄在其每一个trans(事务)中是否出现
       val common = subSet.toArray.map(freqItemsTrans(_))
       val commonArray = new Array[Boolean](totalCount)
       Range(0, totalCount).foreach(i => commonArray(i) = logicalAnd(i, common))
@@ -212,7 +205,8 @@ class FastApriori(private var minSupport: Double, private var numPartitions: Int
     candidates
   }
 //每一个频繁一项集和它对应的0-1数组(即是否在记录中出现过)
-//返回一个元素是一个二元元组的数组,这个元组中的第一个元素是一个下标,这个下标代表着这个这是排名第几的英雄,然后第二个元素是一个数组,这个数组的每一位代表这个英雄是否在本次选择记录中
+//返回一个元素是一个二元元组的数组,这个元组中的第一个元素是一个下标,这个下标代表着这个这是排名第几的英雄,
+// 然后第二个元素是一个数组,这个数组的每一位代表这个英雄是否在本次选择记录中
   private def getFreqItemsTrans(newData: RDD[(Int, Array[Int])],
                                 freqItems: Array[String],
                                 totalCount: Int

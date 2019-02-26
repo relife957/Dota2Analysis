@@ -8,23 +8,26 @@ import scala.collection.mutable
   * @create  2018-12-13 12:09 PM
   **/
 class OutputRules(
-				  private val freqItemset: Array[(Set[Int], Int)],  //从一项频繁集开始的所有频繁集(频繁集的内容是对应商品的排名)
+				  private val freqItemset: Array[(Set[Int], Int)],  //从一项频繁集开始的所有频繁集(频繁集的内容是对应英雄的排名)
 				  private val freqItems: Array[String],
-				  private val itemToRank: mutable.HashMap[String, Int] //商品编号和商品排名
+				  private val itemToRank: mutable.HashMap[String, Int] //英雄编号和英雄排名
 		  ) extends Serializable {
 
 	def run(sc: SparkContext)= {
 		val grouped = freqItemset.groupBy(_._1.size)
 		val rules1 = genRules(sc, grouped)
+		val rankToitem = itemToRank.map(x=>(x._2,x._1.toInt))
 		val rules = rules1.map(x=>{
 			val top5 = x._2.toArray.sortWith(associationRulesSort).take(5).map(x => x._2)
+			x._1.map(rankToitem(_))
+			top5.map(rankToitem(_))
 			(x._1,top5)
 		})
 		rules
 	}
 
 	/**
-	  * 按置信度由高到低排序,如果置信度相同,就按商品编号排
+	  * 按置信度由高到低排序,如果置信度相同,就按英雄编号排
 	  * @param x
 	  * @param y
 	  * @return
@@ -49,8 +52,8 @@ class OutputRules(
 			var i = 0
 			val subsetsLen = subsets.length
 			while (targets.nonEmpty && i < subsetsLen) {
-				val subset = subsets(i) //遍历subsets
-				if (targets contains subset._1) { //如果n项频繁集中包含n+1项的去一项子集
+				val subset = subsets(i) //遍历subsets,subset是所有n项频繁集,
+				if (targets contains subset._1) { //如果n项频繁集等于n+1项的去一项子集
 					complements.append((subset._1, (superset -- subset._1).head, count.toDouble / subset._2)) //(n项频繁集,n+1想比n项多出的那个元素,n+1项频繁集的计数/n项频繁集的计数)
 					targets.remove(subset._1)
 				}
