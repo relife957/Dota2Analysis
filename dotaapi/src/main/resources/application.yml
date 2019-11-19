@@ -36,14 +36,35 @@ spring:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: 123
-    hikari:
-      minimum-idle: 5
-      maximum-pool-size: 15
-      idle-timeout: 30000
-      pool-name: DatebookHikariCP
-      connection-timeout: 30000
-      connection-test-query: SELECT 1
+
+    type: com.alibaba.druid.pool.DruidDataSource
+    #   数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1
+    testWhileIdle: true
+    testOnBorrow: true
+    testOnReturn: true
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+#    hikari:
+#      minimum-idle: 5
+#      maximum-pool-size: 15
+#      idle-timeout: 30000
+#      pool-name: DatebookHikariCP
+#      connection-timeout: 30000
+#      connection-test-query: SELECT 1
 
 mybatis:
   configuration:
     map-underscore-to-camel-case: true   #实现下划线对驼峰的转换
+logging:
+  config: classpath:logback-spring.xml

@@ -12,7 +12,7 @@ import java.util.List;
  **/
 public interface PurchaseInfoDao {
 
-    @Select("select * from api.purchase where hero_id=#{hero_id} and kind=#{kind}")
+    @Select("select * from api.purchase where hero_id=#{hero_id} and kind=#{kind} order by count DESC limit 8")
     List<PurchaseInfo> getByIdAndKind(int hero_id , int kind);
 
 }

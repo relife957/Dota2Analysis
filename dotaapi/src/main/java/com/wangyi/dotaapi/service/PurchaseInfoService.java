@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class PurchaseInfoService {
 
-    PurchaseInfoDao purchaseInfoDao ;
+    private PurchaseInfoDao purchaseInfoDao ;
 
     @Autowired
     public PurchaseInfoService(PurchaseInfoDao purchaseInfoDao) {

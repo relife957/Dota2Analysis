@@ -40,4 +40,6 @@ public class MyConfiguration implements WebMvcConfigurer {
         return (target, method, params) -> params[0]+" "+params[1];
     }
 
+
+
 }

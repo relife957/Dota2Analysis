@@ -5,17 +5,17 @@ package com.wangyi.dotaapi.Exception;
  * @create 2019-01-18 4:06 PM
  **/
 public class NotFoundException extends RuntimeException{
-    private int heroId ;
+    private Object input ;
 
-    public NotFoundException(int heroId) {
-        this.heroId = heroId;
+    public NotFoundException(Object input) {
+        this.input = input;
     }
 
-    public int getHeroId() {
-        return heroId;
+    public Object getInput() {
+        return input;
     }
 
-    public void setHeroId(int heroId) {
-        this.heroId = heroId;
+    public void setInput(Object input) {
+        this.input = input;
     }
 }

@@ -28,14 +28,6 @@ public class OriginalDataController {
         return service.getAllData() ;
     }
 
-
-    @ExceptionHandler(TooManyResultsException.class)//处理所有异常
-    @ResponseBody
-    public ApiResult defaultErrorHandler(RuntimeException  ex) {
-        // 打印异常信息：
-        return new ApiResult(ex.getMessage());
-    }
-
     @GetMapping("/{sno}")
     public OriginalData getOneBySno(@PathVariable String sno){
 

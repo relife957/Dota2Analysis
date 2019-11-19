@@ -8,12 +8,6 @@ public class Test {
 
 
     public static void main(String[] args) {
-        T2 t = new T2(new T1()) ;
-        try {
-            System.out.println(t.div(1,0));
-        }catch (Exception e){
-            System.out.println("------------");
-        }
     }
 }
 
