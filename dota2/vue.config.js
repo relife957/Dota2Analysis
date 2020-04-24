@@ -5,5 +5,9 @@ module.exports = {
                 javascriptEnabled: true,
             }
         }
-    }
+    },
+        devServer: {
+          port: 8081
+        }      
+      
 }

@@ -1,8 +1,8 @@
 <template>
-  <div >
-    <div class="headerImg"/>
-    <br>
-    <br>
+  <div>
+    <div class="headerImg" />
+    <br />
+    <br />
 
     <a-select
       mode="multiple"
@@ -15,32 +15,56 @@
       :notFoundContent="fetching ? undefined : null"
       size="large"
     >
-      <a-spin v-if="fetching" slot="notFoundContent" size="small"/>
+      <a-spin v-if="fetching" slot="notFoundContent" size="small" />
       <Option v-for="d in data" :key="d.value">{{d.text}}</Option>
     </a-select>
-    <br>
-    <br>
+    <br />
+    <br />
 
-    <a-button type="primary" icon="search" style="margin: auto;display: block;" size="large" @click="recommend">推荐</a-button>
-    <br/>
+    <a-button
+      type="primary"
+      icon="search"
+      style="margin: auto;display: block;"
+      size="large"
+      @click="recommend"
+    >推荐</a-button>
+    <br />
     <a-row type="flex">
-      <a-col :span=6  v-for="hero in heroes" :key="hero.heroId" >
+      <a-col :span="6" v-for="hero in heroes" :key="hero.heroId">
         <a-card hoverable style="width: 250px" type="inner">
-          <img
-            alt="example"
-            :src= hero.img
-            slot="cover"
-          >
-          <Meta :title=hero.cnName :description=hero.cnRoles />
+          <img alt="example" :src="hero.img" slot="cover" />
+          <a-card-meta :title="hero.cnName">
+            <template slot="description">
+              <div >
+                <a-tag color="#2db7f5" v-for="item in hero.cnRoles.split(',')" :key="item" >
+                  {{item}}</a-tag>
+              </div>
+              <!-- <div v-for="item in hero.cnRoles.split(',')" :key="item">
+
+                <a-popover title="Title" trigger="hover">
+                  <a-button type="primary">{{item}}</a-button>
+                </a-popover>
+
+              </div>-->
+            </template>
+          </a-card-meta>
         </a-card>
       </a-col>
-      
     </a-row>
   </div>
 </template>
 <script>
 import request from "../util/request";
-import { Select, Spin, notification, Button, Card,Row,Col } from "ant-design-vue";
+import {
+  Select,
+  Spin,
+  notification,
+  Button,
+  Card,
+  Row,
+  Col,
+  Tag
+} from "ant-design-vue";
 const Option = Select.Option;
 const Meta = Card.Meta;
 import debounce from "lodash/debounce";
@@ -51,9 +75,10 @@ export default {
     Option,
     AButton: Button,
     ACard: Card,
-    Meta,
+    ACardMeta: Meta,
     ARow: Row,
-    ACol: Col
+    ACol: Col,
+    ATag: Tag
   },
   data() {
     this.lastFetchId = 0;
@@ -63,11 +88,11 @@ export default {
       data: [],
       value: [],
       fetching: false,
-      heroes: [],
+      heroes: []
       // note: {
-        // backgroundImage: "url(" + require("../assets/background.png") + ")",
-        // backgroundRepeat: "no-repeat",
-        // backgroundSize: "100% 100%"
+      // backgroundImage: "url(" + require("../assets/background.png") + ")",
+      // backgroundRepeat: "no-repeat",
+      // backgroundSize: "100% 100%"
       // }
     };
   },
@@ -120,30 +145,36 @@ export default {
         }
       });
     },
-    recommend(){
-        console.log(this.value);
-        let params = "";
-        const len = this.value.length;
-        for(let i = 0 ; i < len;i++){
-          if(i != this.value-1){
-            params = params.concat(this.value[i]).concat(" ")
-          }else{
-            params = params.concat(this.value[i]);
-          }
+    recommend() {
+      let params = "";
+      const len = this.value.length;
+      for (let i = 0; i < len; i++) {
+        if (i != this.value - 1) {
+          params = params.concat(this.value[i]).concat(" ");
+        } else {
+          params = params.concat(this.value[i]);
         }
-        console.log(params);
-        request({
-          url: "http://localhost:8080/team/recommend",
-          methods: "get",
-          params: {
-            teams: params
-          }
-        })
+      }
+      request({
+        url: "http://localhost:8080/team/recommend",
+        methods: "get",
+        params: {
+          teams: params
+        }
+      })
         .then(response => response.data)
         .then(body => {
-          console.log(body);
           this.heroes = body;
-        })
+          this.deal_data();
+  
+        });
+    },
+    deal_data() {
+      for (let i = 0; i < this.heroes.length; i++) {
+        var hero = this.heroes[i];
+        hero.cnRoles = hero.cnRoles.replace(/\[|]/g, "").replace(/\"/g,"");
+        this.heroes[i] = hero;
+      }
     }
   }
 };
@@ -158,6 +189,5 @@ export default {
   margin: auto;
   text-align: center;
 }
-
 </style>
 

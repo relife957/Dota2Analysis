@@ -15,16 +15,22 @@
           <router-link to="/recommend">阵容推荐</router-link>
         </a-menu-item>
         <a-menu-item key="3">
-          <router-link to="/history">历史信息</router-link>
+          <router-link to="/history">历史查询</router-link>
+        </a-menu-item>
+        <a-menu-item key="4">
+          <router-link to="/openApi">开放平台</router-link>
+        </a-menu-item>
+        <a-menu-item key="5">
+          <router-link to="/dataManage">数据管理平台</router-link>
         </a-menu-item>
       </a-menu>
     </a-layout-header>
     <a-layout-content style="padding: 0 50px">
-      <div :style="{ background: '#fff', padding: '24px' }">
+      <div :style="{ background: '#fff', padding: '24px', minHeight: '280px' }">
         <router-view/>
       </div>
     </a-layout-content>
-    <!-- <a-layout-footer style="text-align: center">Ant Design ©2018 Created by Ant UED</a-layout-footer> -->
+    <a-layout-footer style="text-align: center">Dota2阵容推荐系统 ©2018 Created by Wang Man Rong </a-layout-footer>
   </a-layout>
 </template>
 <style>

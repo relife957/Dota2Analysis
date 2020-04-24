@@ -3,8 +3,10 @@ package com.wangyi.dotaapi.service;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.wangyi.dotaapi.dao.HeroInfoDao;
+import com.wangyi.dotaapi.dao.RecordDao;
 import com.wangyi.dotaapi.dao.TeamDao;
 import com.wangyi.dotaapi.domain.HeroInfo;
+import com.wangyi.dotaapi.domain.Record;
 import com.wangyi.dotaapi.domain.Team;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +17,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,29 +31,22 @@ import java.util.stream.Stream;
 @Service
 public class TeamService {
 
-    private TeamDao teamDao ;
-    private HeroInfoService heroInfoService;
-//    private static HashMap<Integer,String> id_name_map ;
-    private static HashMap<String,Integer> name_id_map ;
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    static {
-//        id_name_map = new HashMap<>(121);
-        name_id_map = new HashMap<>(121);
-        String path = "/home/wangyi/IdeaProjects/dotaapi/src/main/resources/cn_heroes_name.json";
-        String res = ReadFile(path);
-        JSONObject jsonObject = JSONObject.parseObject(res);
-        JSONArray teamData = jsonObject.getJSONArray("data");
-        for (Object o : teamData){
-            JSONObject hero = (JSONObject)o;
-//            id_name_map.put(hero.getInteger("hero_id"),hero.getString("cn_name"));
-            name_id_map.put(hero.getString("cn_name"),hero.getInteger("hero_id"));
-        }
-    }
+    //    private static HashMap<Integer,String> id_name_map ;
+    private static HashMap<String,Integer> name_id_map ;
+
+
+    private TeamDao teamDao ;
+    private HeroInfoService heroInfoService;
+    private RecordDao recordDao;
+
     @Autowired
-    public TeamService(TeamDao teamDao,HeroInfoService heroInfoService) {
+    public TeamService(TeamDao teamDao,HeroInfoService heroInfoService,RecordDao recordDao) {
         this.teamDao = teamDao;
         this.heroInfoService = heroInfoService;
+        this.recordDao = recordDao;
+        init();
     }
 
     public List<HeroInfo> getByTeam(String teams){
@@ -67,6 +64,13 @@ public class TeamService {
             logger.info("推荐集中不包含{}",teams);
             return null;
         }
+
+        Record record = new Record();
+        record.setInput(teams);
+        record.setOutput(result.getRecommend().trim());
+        record.setAddTime(Date.valueOf(LocalDate.now()));
+        recordDao.insert(record);
+
         String[] ids = result.getRecommend().trim().split(" ");
         List<HeroInfo> res = new ArrayList<>();
 
@@ -147,6 +151,20 @@ public class TeamService {
             permutate(teamArray,k+1,length,allGroup);
             teamArray[k] = teamArray[i] ;
             teamArray[i] = temp ;
+        }
+    }
+
+    private void init(){
+//        id_name_map = new HashMap<>(121);
+        name_id_map = new HashMap<>(121);
+        String path = System.getProperty("user.dir")+"/src/main/resources/cn_heroes_name.json";
+        String res = ReadFile(path);
+        JSONObject jsonObject = JSONObject.parseObject(res);
+        JSONArray teamData = jsonObject.getJSONArray("data");
+        for (Object o : teamData){
+            JSONObject hero = (JSONObject)o;
+//            id_name_map.put(hero.getInteger("hero_id"),hero.getString("cn_name"));
+            name_id_map.put(hero.getString("cn_name"),hero.getInteger("hero_id"));
         }
     }
 

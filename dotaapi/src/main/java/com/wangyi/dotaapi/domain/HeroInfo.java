@@ -1,72 +1,31 @@
 package com.wangyi.dotaapi.domain;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
 /**
  * @author wangyi
  * @create 2019-10-22 5:53 PM
  **/
+@Data
+@ApiModel("英雄详细信息")
 public class HeroInfo {
 
     private Integer id ;
+    @ApiModelProperty("英雄id")
     private Integer heroId;
+    @ApiModelProperty("英雄中文名字")
     private String cnName;
+    @ApiModelProperty("英雄英文名字")
     private String name ;
+    @ApiModelProperty("英雄定位")
     private String cnRoles;
+    @ApiModelProperty("英雄图像")
     private String img ;
+    @ApiModelProperty("英雄类别")
     private String cnAttr ;
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
-    public Integer getHeroId() {
-        return heroId;
-    }
-
-    public void setHeroId(Integer heroId) {
-        this.heroId = heroId;
-    }
-
-    public String getCnName() {
-        return cnName;
-    }
-
-    public void setCnName(String cnName) {
-        this.cnName = cnName;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCnRoles() {
-        return cnRoles;
-    }
-
-    public void setCnRoles(String cnRoles) {
-        this.cnRoles = cnRoles;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
-
-    public String getCnAttr() {
-        return cnAttr;
-    }
-
-    public void setCnAttr(String cnAttr) {
-        this.cnAttr = cnAttr;
-    }
 }

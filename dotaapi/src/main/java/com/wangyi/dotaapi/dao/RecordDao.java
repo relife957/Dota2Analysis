@@ -3,7 +3,10 @@ package com.wangyi.dotaapi.dao;
 import com.wangyi.dotaapi.domain.Record;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @author wangyi
@@ -11,14 +14,12 @@ import org.apache.ibatis.annotations.Update;
  **/
 public interface RecordDao {
 
-    @Select("select max(id) from api.record")
-    int findMaxId();
+    @Select("select * from api.record where add_time between #{startDate} and #{endDate} limit #{limit}")
+    List<Record> findRecordByAddTime(LocalDate startDate, LocalDate endDate, int limit);
 
-    @Insert("insert into api.record values(#{id},#{input},#{output},#{count},now(),#{version})")
+    @Insert("insert into api.record(input,output,add_time) values(#{input},#{output},now())")
     void insert(Record record);
 
-    @Update("update api.record set input =#{input},output=#{output},count=#{count},add_time=now(),version=#{version} where id=#{id}")
-    void update(Record record);
 
     @Select("select * from api.record where input=#{input}")
     Record findByInput(String input);

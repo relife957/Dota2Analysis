@@ -10,6 +10,7 @@ Vue.use(Button);
 Vue.use(Layout);
 Vue.use(Menu);
 
+
 new Vue({
   router,
   store,

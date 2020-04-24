@@ -4,19 +4,22 @@ import com.wangyi.dotaapi.Exception.InvalidParamException;
 import com.wangyi.dotaapi.Exception.NotFoundException;
 import com.wangyi.dotaapi.domain.PurchaseInfo;
 import com.wangyi.dotaapi.service.PurchaseInfoService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.wangyi.dotaapi.Exception.Error ;
+import springfox.documentation.annotations.ApiIgnore;
+
 import java.util.List;
 
 /**
  * @author wangyi
  * @create 2018-12-20 10:29 PM
  **/
-
+@ApiIgnore
 @RestController
 @RequestMapping("/purchase")
 public class PurchaseInfoController {
@@ -26,18 +29,6 @@ public class PurchaseInfoController {
     @Autowired
     public PurchaseInfoController(PurchaseInfoService purchaseInfoService) {
         this.purchaseInfoService = purchaseInfoService;
-    }
-    @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<Error> informationNotFound(NotFoundException e){
-        int heroId = (int) e.getInput();
-        Error error = new Error(400 , "this Hero "+heroId+"'s information not found");
-        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
-    }
-
-    @ExceptionHandler(InvalidParamException.class)
-    public ResponseEntity<Error> invalidInput(InvalidParamException e){
-        Error error = new Error(400,"Invalid input , please check your input") ;
-        return new ResponseEntity<>(error, HttpStatus.INSUFFICIENT_STORAGE) ;
     }
 
     @GetMapping("/recommend")

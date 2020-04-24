@@ -25,12 +25,12 @@ public class HeroInfoService {
     @Autowired
     public HeroInfoService(HeroInfoDao heroInfoDao) {
         this.heroInfoDao = heroInfoDao;
+        initHero();
     }
 
 
     public List<HeroInfo> getHeroesByKeyName(String keyName){
-        List<HeroInfo> infos = heroInfoDao.getHeroesBykeyName("%"+keyName+"%");
-        return infos;
+        return heroInfoDao.getHeroesBykeyName("%"+keyName+"%");
     }
 
     public HeroInfo getHeroByHeroId(int id){

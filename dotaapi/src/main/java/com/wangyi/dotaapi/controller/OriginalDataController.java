@@ -5,6 +5,7 @@ import com.wangyi.dotaapi.service.OriginalDataService;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * @author wangyi
  * @create 2018-12-12 6:54 PM
  **/
+@ApiIgnore
 @RestController
 @RequestMapping("/original")
 public class OriginalDataController {
