@@ -2,6 +2,7 @@ package com.wangyi.dotaapi.dao;
 
 import com.wangyi.dotaapi.domain.HeroInfo;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -17,4 +18,7 @@ public interface HeroInfoDao {
     HeroInfo getHeroByHeroId(int heroId);
     @Select("select * from api.hero_info")
     List<HeroInfo> getAllHeroes();
+
+    @Update("update api.hero_info set cn_roles = #{cnRoles} where hero_id = #{heroId}")
+    void updateRoles(HeroInfo heroInfo);
 }

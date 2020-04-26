@@ -9,8 +9,14 @@ import org.junit.Test;
 
 public class DotaTest {
 
+    String deal(String attr){
+        return attr.substring(1,attr.length()-1).replace("\"","")
+                .replace(" ","");
+    }
+
     @Test
     public void test(){
-        System.out.println(System.getProperty("user.dir"));
+        String s = "[\"核心\", \"逃生\", \"爆发\"]";
+        System.out.println(deal(s));
     }
 }

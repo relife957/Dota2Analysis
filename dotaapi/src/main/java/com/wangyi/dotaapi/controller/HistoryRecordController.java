@@ -1,11 +1,8 @@
 package com.wangyi.dotaapi.controller;
 
 import com.google.common.base.Strings;
-import com.wangyi.dotaapi.Exception.Error;
 import com.wangyi.dotaapi.Exception.InvalidParamException;
 import com.wangyi.dotaapi.Exception.NotFoundException;
-import com.wangyi.dotaapi.Exception.ResultEmptyException;
-import com.wangyi.dotaapi.domain.HeroInfo;
 import com.wangyi.dotaapi.domain.Record;
 import com.wangyi.dotaapi.service.HistoryRecordService;
 import com.wangyi.dotaapi.util.DateUtils;
@@ -33,22 +30,14 @@ public class HistoryRecordController {
         this.historyRecordService = historyRecordService;
     }
 
-//    @ExceptionHandler(ResultEmptyException.class)
-//    public ResponseEntity<Error> invalidInput(ResultEmptyException e){
-//        Error error = new Error(401,"the query result is empty!") ;
-//        return new ResponseEntity<>(error, HttpStatus.INSUFFICIENT_STORAGE) ;
-//    }
-
     @ApiOperation("通过开始日期和结束日期返回历史查询列表")
     @GetMapping("/query")
     public ResponseEntity<List<Record>> getRecord(
             @RequestParam("start_date") String startDate, @RequestParam("end_date") String endDate){
-        if (Strings.isNullOrEmpty(startDate)){
-            startDate = DateUtils.today();
+        if (Strings.isNullOrEmpty(startDate) || Strings.isNullOrEmpty(endDate)){
+            throw new InvalidParamException();
         }
-        if (Strings.isNullOrEmpty(endDate)){
-            endDate = DateUtils.today();
-        }
+
         List<Record> recordList = historyRecordService.getRecordList(startDate,endDate);
         if (recordList == null){
             throw new NotFoundException(startDate +  " - " + endDate);

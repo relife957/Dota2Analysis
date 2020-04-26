@@ -53,6 +53,14 @@ const routes = [
     meta:{
       title: "Dota2阵容推荐数据管理平台"
     }
+  },
+  {
+    path: "/rank",
+    name: "rank",
+    component: () => import("../views/Rank.vue"),
+    meta:{
+      title: "Dota2阵容推荐排行榜"
+    }
   }
 ];
 

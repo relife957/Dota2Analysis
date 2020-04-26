@@ -1,7 +1,10 @@
 package com.wangyi.dotaapi.util;
 
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 /**
  * @author: wangyi
@@ -16,7 +19,6 @@ public class DateUtils {
         LocalDate date = LocalDate.now();
         return formatter.format(date);
     }
-////localhost:8080/history/query?start_date=%222020-04-01T02:24:07.294Z%22&end_date=%222020-04-02T02:24:32.767Z%22
 
     public static boolean compareDate(String startDate , String endDate){
         LocalDate start = LocalDate.parse(startDate,formatter);
@@ -26,5 +28,11 @@ public class DateUtils {
 
     public static LocalDate string2Date(String d){
         return LocalDate.parse(d);
+    }
+
+    public static String date2String(Date d){
+        Instant instant = d.toInstant();
+        LocalDate ld = instant.atOffset(ZoneOffset.UTC).toLocalDate();
+        return formatter.format(ld);
     }
 }

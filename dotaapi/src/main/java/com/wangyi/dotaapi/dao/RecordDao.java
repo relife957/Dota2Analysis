@@ -21,7 +21,8 @@ public interface RecordDao {
     void insert(Record record);
 
 
-    @Select("select * from api.record where input=#{input}")
-    Record findByInput(String input);
+    @Select("select * from api.record where add_time between #{startDate} and #{endDate}")
+    List<Record> findRecordByAddTimeNoLimit(LocalDate startDate, LocalDate endDate);
+
 
 }

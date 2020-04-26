@@ -25,10 +25,10 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(ResultEmptyException.class)
-    public ResponseEntity<Error> invalidInput(ResultEmptyException e){
-        Error error = new Error(404,"the query result is empty!") ;
-        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND) ;
+    @ExceptionHandler(ServerException.class)
+    public ResponseEntity<Error> serverError(ServerException e){
+        Error error = new Error(503,"the server occur error!") ;
+        return new ResponseEntity<>(error, HttpStatus.SERVICE_UNAVAILABLE) ;
     }
 
 

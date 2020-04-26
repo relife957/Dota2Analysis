@@ -1,6 +1,5 @@
 package com.wangyi.dotaapi.dao;
 
-import com.wangyi.dotaapi.domain.OriginalData;
 import com.wangyi.dotaapi.domain.PurchaseInfo;
 import org.apache.ibatis.annotations.Select;
 

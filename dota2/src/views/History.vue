@@ -1,6 +1,7 @@
 <template>
 <div>
-  <span style="font-size: 1.3em; font-style: oblique 40deg;">历史查询列表 </span>
+  <span style="font-size: 1.3em; font-style: oblique 40deg;">
+    {{start_date}}日 - {{end_date}}日历史查询列表 </span>
 <div style="float:right">
 <a-date-picker
       :disabledDate="disabledStartDate"
@@ -29,14 +30,32 @@
     :loading="loading"
     @change="handleTableChange"
   >
-    
+    <span slot="qteams" slot-scope="input">
+      <a-tag
+        v-for="hero in input.split(' ')"
+        :color="hero.length > 2 ? hero.length > 3 ?'geekblue' : 'green' : 'volcano' "
+        :key="hero"
+      >
+        {{ hero }}
+      </a-tag>
+    </span>
+
+        <span slot="rteams" slot-scope="output">
+      <a-tag
+        v-for="hero in toList(output)"
+        :color="hero.length > 2 ? hero.length > 3 ?'geekblue' : 'green' : 'volcano' "
+        :key="hero"
+      >
+        {{ hero }}
+      </a-tag>
+    </span>
   </a-table>
 </div>
 </template>
 <script>
 import request from "../util/request";
 
-import { Table ,DatePicker
+import { Table ,DatePicker,Tag
 } from "ant-design-vue";
 var moment = require('moment')
 
@@ -45,13 +64,16 @@ const columns = [
     title: "查询阵容",
     dataIndex: "input",
     width: "30%",
+    scopedSlots: { customRender: "qteams" },
     sorter: (a, b) => a.input.length - b.input.length,
     sortDirections: ['ascend' | 'descend'],
+
   },
   {
     title: "推荐阵容",
     dataIndex: "output",
-    width: "40%"
+    width: "40%",
+    scopedSlots: { customRender: "rteams" }
   },
   {
     title: "查询日期",
@@ -64,7 +86,8 @@ const columns = [
 export default {
   components: {
     ATable: Table,
-    ADatePicker: DatePicker
+    ADatePicker: DatePicker,
+    ATag: Tag
   },
   mounted() {
     this.fetch();
@@ -80,6 +103,8 @@ export default {
       startValue: null,
       endValue: null,
       endOpen: false,
+      start_date: "2020-04-01",
+      end_date: "2020-04-30"
     };
   },
 
@@ -99,20 +124,18 @@ export default {
     },
     fetch(params = {}) {
       this.loading = true;
-      var start_date = "2020-04-01"
-      var end_date = "2020-04-30"
       if(this.startValue){
-        start_date = moment(this.startValue).format("YYYY-MM-DD");
+        this.start_date = moment(this.startValue).format("YYYY-MM-DD");
       }
       if(this.endValue){
-        end_date = moment(this.endValue).format("YYYY-MM-DD");
+        this.end_date = moment(this.endValue).format("YYYY-MM-DD");
       }
       request({
         url: "http://localhost:8080/history/query",
         method: "get",
         params: {
-          start_date: start_date,
-          end_date: end_date
+          start_date: this.start_date,
+          end_date: this.end_date
         }
       })
         .then(response => response.data)
@@ -122,6 +145,7 @@ export default {
 
           this.loading = false;
           this.data = body;
+
           pagination.total = this.data.length;
           this.pagination = pagination;
         }).catch(error=>{
@@ -133,8 +157,11 @@ export default {
       s = s.replace(/-/g,"/");
       return new Date(s);
     },
+    toList(s){
+      return s.split(' ');
+    },
     refresh() {
-      console.log(start_date)
+      console.log(this.start_date)
       this.fetch();
     },
      disabledStartDate(startValue) {

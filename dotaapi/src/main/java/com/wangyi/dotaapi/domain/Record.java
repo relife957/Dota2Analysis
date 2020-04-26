@@ -24,4 +24,27 @@ public class Record implements Validate{
     public boolean validate(){
         return input!=null && output!=null;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj){
+            return true;
+        }
+        if (!(obj instanceof Record)){
+            return false;
+        }
+        Record other = (Record)obj ;
+        return this.getInput().equals(other.getInput()) &&
+                this.getOutput().equals(other.getOutput());
+    }
+
+    @Override
+    public int hashCode(){
+        int result = 17;
+        result = result * 31 + this.getInput().hashCode();
+        result = result * 31 + this.getOutput().hashCode();
+
+        return result;
+
+    }
 }

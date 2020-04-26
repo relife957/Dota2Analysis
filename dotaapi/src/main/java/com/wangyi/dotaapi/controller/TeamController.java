@@ -1,6 +1,5 @@
 package com.wangyi.dotaapi.controller;
 
-import com.wangyi.dotaapi.Exception.Error;
 import com.wangyi.dotaapi.Exception.InvalidParamException;
 import com.wangyi.dotaapi.domain.HeroInfo;
 import com.wangyi.dotaapi.service.TeamService;

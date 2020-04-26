@@ -1,6 +1,8 @@
 package com.wangyi.dotaapi.service;
 
 import com.alibaba.druid.sql.visitor.functions.If;
+import com.google.common.base.Strings;
+import com.google.common.collect.Lists;
 import com.wangyi.dotaapi.dao.HeroInfoDao;
 import com.wangyi.dotaapi.domain.HeroInfo;
 import org.slf4j.Logger;
@@ -8,9 +10,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author wangyi
@@ -44,6 +45,17 @@ public class HeroInfoService {
             logger.info("不包含 {} 对应英雄",id);
         }
         return null;
+    }
+
+    public List<HeroInfo> getHeroInfoList(String numberTeam){
+        if (Strings.isNullOrEmpty(numberTeam)){
+            return new ArrayList<>();
+        }
+        String[] heroes = numberTeam.split(" ");
+        return Lists.newArrayList(heroes).stream()
+                .map(hero -> allHeroesMap.get(Integer.parseInt(hero)))
+                .filter(Objects::nonNull).collect(Collectors.toList());
+
     }
 
     private void initHero() {

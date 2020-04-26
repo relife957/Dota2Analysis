@@ -39,13 +39,7 @@
                 <a-tag color="#2db7f5" v-for="item in hero.cnRoles.split(',')" :key="item" >
                   {{item}}</a-tag>
               </div>
-              <!-- <div v-for="item in hero.cnRoles.split(',')" :key="item">
 
-                <a-popover title="Title" trigger="hover">
-                  <a-button type="primary">{{item}}</a-button>
-                </a-popover>
-
-              </div>-->
             </template>
           </a-card-meta>
         </a-card>
@@ -165,7 +159,6 @@ export default {
         .then(response => response.data)
         .then(body => {
           this.heroes = body;
-          this.deal_data();
   
         });
     },
