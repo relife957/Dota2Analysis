@@ -1,11 +1,14 @@
 package com.wangyi.dotaapi;
 
+import org.junit.Ignore;
+
 import java.util.Arrays;
 
 /**
  * @author wangyi
  * @create 2019-02-28 10:28 PM
  **/
+@Ignore
 public class QuickSort {
     static int repartition(int[] nums,int start ,int end){
         int base = nums[start] ;

@@ -18,7 +18,7 @@ import java.util.List;
  * @description:
  * @date: 2020-04-25 12:58
  **/
-
+@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = DotaapiApplication.class)
 public class ServiceTest {

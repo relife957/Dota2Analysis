@@ -9,7 +9,7 @@ import org.apache.spark.sql.SparkSession
 object Main {
 	def main(args: Array[String]) {
 		val session = SparkSession.builder()
-				//			  .master("local[*]")                    //本地测试
+//							  .master("local[*]")                    //本地测试
 				.appName("Dota2Analysis")
 				.getOrCreate()
 		session.conf.set("spark.numShufflePartitions", 500)
@@ -26,7 +26,7 @@ object Main {
 		
 //		top5
 		val sc = session.sparkContext
-		val minSupport = 0.0625
+		val minSupport = 0.0001
 		val input = args(0)
 		val output = args(1)
 		val dataRDD = LinkPostgresql.readAsRDD(sc, input)

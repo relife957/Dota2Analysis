@@ -1,0 +1,31 @@
+18:50:15.942 logback [main] INFO  c.wangyi.dotaapi.DotaapiApplication - Starting DotaapiApplication on wangyideMacBook-Pro.local with PID 31403 (/Users/wangyi/github/Dota2Analysis/dotaapi/target/classes started by wangyi in /Users/wangyi/github/Dota2Analysis/dotaapi)
+18:50:15.946 logback [main] INFO  c.wangyi.dotaapi.DotaapiApplication - No active profile set, falling back to default profiles: default
+18:50:16.962 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+18:50:16.964 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+18:50:16.995 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+18:50:17.336 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1c798f2d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:50:17.349 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$9bf9dc5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:50:17.619 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+18:50:17.628 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+18:50:17.634 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18:50:17.635 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+18:50:17.639 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/wangyi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+18:50:17.708 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18:50:17.708 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1717 ms
+18:50:18.193 logback [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+18:50:18.939 logback [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+18:50:19.064 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+18:50:19.551 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+18:50:19.564 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+18:50:19.590 logback [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+18:50:19.694 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+18:50:19.709 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+18:50:19.719 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+18:50:19.722 logback [main] INFO  c.wangyi.dotaapi.DotaapiApplication - Started DotaapiApplication in 4.155 seconds (JVM running for 4.752)
+18:51:02.325 logback [http-nio-8080-exec-10] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:51:02.325 logback [http-nio-8080-exec-10] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18:51:02.343 logback [http-nio-8080-exec-10] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+18:51:36.207 logback [http-nio-8080-exec-5] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+18:51:36.256 logback [http-nio-8080-exec-5] INFO  c.w.d.controller.TeamController - 输入阵容: 影魔 巨牙海民  
+18:57:17.678 logback [Thread-11] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+18:57:17.681 logback [Thread-11] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

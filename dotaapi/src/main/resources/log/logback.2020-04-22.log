@@ -1,0 +1,108 @@
+09:15:09.959 logback [main] INFO  c.wangyi.dotaapi.DotaapiApplication - Starting DotaapiApplication on wangyideMacBook-Pro.local with PID 22263 (/Users/wangyi/github/Dota2Analysis/dotaapi/target/classes started by wangyi in /Users/wangyi/github/Dota2Analysis/dotaapi)
+09:15:09.965 logback [main] INFO  c.wangyi.dotaapi.DotaapiApplication - No active profile set, falling back to default profiles: default
+09:15:10.744 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+09:15:10.746 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+09:15:10.771 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+09:15:11.047 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$98f7ba96] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:15:11.055 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$19776d64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:15:11.432 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+09:15:11.442 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+09:15:11.450 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:15:11.450 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+09:15:11.455 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/wangyi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+09:15:11.522 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:15:11.523 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1474 ms
+09:15:12.062 logback [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+09:15:12.769 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+09:15:13.340 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+09:15:13.359 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+09:15:13.377 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+09:15:13.381 logback [main] INFO  c.wangyi.dotaapi.DotaapiApplication - Started DotaapiApplication in 3.978 seconds (JVM running for 4.68)
+09:16:48.138 logback [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:16:48.138 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:16:48.153 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+09:17:23.336 logback [http-nio-8080-exec-9] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:17:23.382 logback [http-nio-8080-exec-9] INFO  c.w.d.controller.TeamController - 输入阵容: 撼地者  
+09:19:32.768 logback [http-nio-8080-exec-3] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:19:32.786 logback [http-nio-8080-exec-3] INFO  c.w.d.controller.TeamController - 输入阵容: 酒仙  
+09:20:44.311 logback [http-nio-8080-exec-8] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:20:44.326 logback [http-nio-8080-exec-8] INFO  c.w.d.controller.TeamController - 输入阵容: 水晶室女  
+09:31:56.220 logback [http-nio-8080-exec-2] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:31:56.237 logback [http-nio-8080-exec-2] INFO  c.w.d.controller.TeamController - 输入阵容: 魅惑魔女  
+09:32:39.826 logback [http-nio-8080-exec-5] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:32:39.885 logback [http-nio-8080-exec-5] INFO  c.w.d.controller.TeamController - 输入阵容: 暗影恶魔  
+09:33:32.039 logback [http-nio-8080-exec-7] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:33:32.054 logback [http-nio-8080-exec-7] INFO  c.w.d.controller.TeamController - 输入阵容: 巨魔战将  
+09:37:18.808 logback [http-nio-8080-exec-2] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:37:18.825 logback [http-nio-8080-exec-2] INFO  c.w.d.controller.TeamController - 输入阵容: 卓尔游侠 暗影恶魔  
+09:41:57.804 logback [http-nio-8080-exec-5] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:41:57.820 logback [http-nio-8080-exec-5] INFO  c.w.d.controller.TeamController - 输入阵容: 变体精灵  
+09:42:33.222 logback [http-nio-8080-exec-7] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:42:33.238 logback [http-nio-8080-exec-7] INFO  c.w.d.controller.TeamController - 输入阵容: 沙王  
+09:47:34.063 logback [http-nio-8080-exec-1] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:47:34.081 logback [http-nio-8080-exec-1] INFO  c.w.d.controller.TeamController - 输入阵容: 主宰 敌法师  
+09:48:33.776 logback [http-nio-8080-exec-4] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:48:33.793 logback [http-nio-8080-exec-4] INFO  c.w.d.controller.TeamController - 输入阵容: 斧王 帕吉  
+09:55:15.323 logback [http-nio-8080-exec-7] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:55:15.340 logback [http-nio-8080-exec-7] INFO  c.w.d.controller.TeamController - 输入阵容: 斧王  
+09:58:13.052 logback [http-nio-8080-exec-10] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+09:58:13.068 logback [http-nio-8080-exec-10] INFO  c.w.d.controller.TeamController - 输入阵容: 幻影长矛手  
+10:01:20.558 logback [http-nio-8080-exec-3] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+10:01:20.574 logback [http-nio-8080-exec-3] INFO  c.w.d.controller.TeamController - 输入阵容: 小小  
+10:19:19.128 logback [http-nio-8080-exec-5] ERROR c.w.d.service.HistoryRecordService - cannot query data from db , caused by org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: operator does not exist: date >= character varying
+  建议：No operator matches the given name and argument types. You might need to add explicit type casts.
+  位置：41
+### The error may exist in com/wangyi/dotaapi/dao/RecordDao.java (best guess)
+### The error may involve com.wangyi.dotaapi.dao.RecordDao.findRecordByAddTime-Inline
+### The error occurred while setting parameters
+### SQL: select * from api.record where add_time between ? and ? limit ?
+### Cause: org.postgresql.util.PSQLException: ERROR: operator does not exist: date >= character varying
+  建议：No operator matches the given name and argument types. You might need to add explicit type casts.
+  位置：41
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: operator does not exist: date >= character varying
+  建议：No operator matches the given name and argument types. You might need to add explicit type casts.
+  位置：41
+10:19:35.142 logback [http-nio-8080-exec-6] ERROR c.w.d.service.HistoryRecordService - cannot query data from db , caused by org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: operator does not exist: date >= character varying
+  建议：No operator matches the given name and argument types. You might need to add explicit type casts.
+  位置：41
+### The error may exist in com/wangyi/dotaapi/dao/RecordDao.java (best guess)
+### The error may involve com.wangyi.dotaapi.dao.RecordDao.findRecordByAddTime-Inline
+### The error occurred while setting parameters
+### SQL: select * from api.record where add_time between ? and ? limit ?
+### Cause: org.postgresql.util.PSQLException: ERROR: operator does not exist: date >= character varying
+  建议：No operator matches the given name and argument types. You might need to add explicit type casts.
+  位置：41
+; bad SQL grammar []; nested exception is org.postgresql.util.PSQLException: ERROR: operator does not exist: date >= character varying
+  建议：No operator matches the given name and argument types. You might need to add explicit type casts.
+  位置：41
+10:26:03.863 logback [Thread-11] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:26:03.866 logback [Thread-11] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+10:44:22.488 logback [main] INFO  c.wangyi.dotaapi.DotaapiApplication - Starting DotaapiApplication on wangyideMacBook-Pro.local with PID 23641 (/Users/wangyi/github/Dota2Analysis/dotaapi/target/classes started by wangyi in /Users/wangyi/github/Dota2Analysis/dotaapi)
+10:44:22.490 logback [main] INFO  c.wangyi.dotaapi.DotaapiApplication - No active profile set, falling back to default profiles: default
+10:44:22.919 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+10:44:22.920 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+10:44:22.947 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+10:44:23.191 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$99af2f9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:44:23.200 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1a2ee268] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:44:23.455 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+10:44:23.461 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+10:44:23.468 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+10:44:23.468 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+10:44:23.473 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/wangyi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+10:44:23.529 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+10:44:23.530 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1017 ms
+10:44:23.991 logback [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+10:44:24.528 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:44:24.929 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+10:44:24.943 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+10:44:24.950 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+10:44:24.953 logback [main] INFO  c.wangyi.dotaapi.DotaapiApplication - Started DotaapiApplication in 2.733 seconds (JVM running for 3.13)
+10:44:55.439 logback [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:44:55.440 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+10:44:55.453 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+10:44:57.733 logback [http-nio-8080-exec-2] INFO  c.w.d.controller.TeamController - 访客: 0:0:0:0:0:0:0:1
+10:44:57.758 logback [http-nio-8080-exec-2] INFO  c.w.d.controller.TeamController - 输入阵容: 敌法师  
+10:55:56.078 logback [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:55:56.082 logback [Thread-8] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

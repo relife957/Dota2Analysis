@@ -2,32 +2,30 @@ package com.wangyi.dotaapi.service;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.wangyi.dotaapi.dao.HeroInfoDao;
 import com.wangyi.dotaapi.dao.RecordDao;
 import com.wangyi.dotaapi.dao.TeamDao;
 import com.wangyi.dotaapi.domain.HeroInfo;
 import com.wangyi.dotaapi.domain.Record;
 import com.wangyi.dotaapi.domain.Team;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ResourceUtils;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * @author wangyi
  * @create 2019-02-01 8:41 PM
  **/
+
 @Service
 public class TeamService {
 
@@ -105,7 +103,12 @@ public class TeamService {
 //    }
 
     public static String ReadFile(String path){
-        File file = new File(path);
+
+        File file = null;
+        try {
+            file = ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX +path);
+        } catch (FileNotFoundException e) {
+        }
         BufferedReader reader = null;
         StringBuilder laststr = new StringBuilder();
         try {
@@ -157,7 +160,7 @@ public class TeamService {
     private void init(){
 //        id_name_map = new HashMap<>(121);
         name_id_map = new HashMap<>(121);
-        String path = System.getProperty("user.dir")+"/src/main/resources/cn_heroes_name.json";
+        String path = "cn_heroes_name.json";
         String res = ReadFile(path);
         JSONObject jsonObject = JSONObject.parseObject(res);
         JSONArray teamData = jsonObject.getJSONArray("data");

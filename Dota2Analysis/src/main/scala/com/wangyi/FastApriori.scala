@@ -32,7 +32,7 @@ class FastApriori(private var minSupport: Double, private var numPartitions: Int
     val partitioner = new HashPartitioner(numParts)
 
     val count = data.count()
-    val minCount = 1    //将数字向上取整,代表最小支持度
+    val minCount = math.ceil(minSupport * count).toInt    //将数字向上取整,代表最小支持度
     val (freqItemsWithCount, freqItems, itemToRank, newData, countMap, totalCount) = genFreqItems(sc, data, minCount, partitioner)
     val freqItemsets = genFreqItemsets(sc, newData, countMap, totalCount, minCount, freqItems) ++ freqItemsWithCount
 

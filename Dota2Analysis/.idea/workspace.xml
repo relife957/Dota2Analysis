@@ -1,128 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="471c273c-e982-4ccd-8a74-92d504905b9a" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="471c273c-e982-4ccd-8a74-92d504905b9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Dota2Analysis.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/wangyi/FastApriori.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/wangyi/FastApriori.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/wangyi/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/wangyi/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/wangyi/OutputRules.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/wangyi/OutputRules.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Dota2Analysis-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Dota2Analysis-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.wangyi.Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.wangyi.Test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/babel-loader/aa6aa8ea201c2f8ee8e7dc33906b37b8.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/babel-loader/aa6aa8ea201c2f8ee8e7dc33906b37b8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/babel-loader/b655c037fb3eaaf586b6b75f1640b4d8.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/babel-loader/b655c037fb3eaaf586b6b75f1640b4d8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/10d2586573aa10a503e2bb796dd0a246.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/10d2586573aa10a503e2bb796dd0a246.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/1616eae72345a04f6c9a3e58749e5ca6.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/1616eae72345a04f6c9a3e58749e5ca6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/348aa80eedfc1e27e87301261bb67cb2.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/348aa80eedfc1e27e87301261bb67cb2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/49f73d603e2ae37bf4e5cd3e524c1358.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/49f73d603e2ae37bf4e5cd3e524c1358.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/4d99662c9fa3184f21a4e1c9f3ff79ce.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/4d99662c9fa3184f21a4e1c9f3ff79ce.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/84d86102940df0c67c786cb3bdbdc19b.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/84d86102940df0c67c786cb3bdbdc19b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/9668c6199107f373d5772b126baf562b.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/9668c6199107f373d5772b126baf562b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/bd98524bd0dd1d429daf0f351c84f32c.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/bd98524bd0dd1d429daf0f351c84f32c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/e4f849ed959e7b1d9f1c7aeae2e89159.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/e4f849ed959e7b1d9f1c7aeae2e89159.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/e7849f16a62c515941768218d24e1b68.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/node_modules/.cache/vue-loader/e7849f16a62c515941768218d24e1b68.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dota2/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../dota2/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dotaapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dotaapi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dotaapi/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dotaapi/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dotaapi/src/test/java/com/wangyi/dotaapi/DotaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dotaapi/src/test/java/com/wangyi/dotaapi/DotaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dotaapi/src/test/java/com/wangyi/dotaapi/DotaapiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dotaapi/src/test/java/com/wangyi/dotaapi/DotaapiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dotaapi/src/test/java/com/wangyi/dotaapi/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dotaapi/src/test/java/com/wangyi/dotaapi/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dotaapi/src/test/java/com/wangyi/dotaapi/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dotaapi/src/test/java/com/wangyi/dotaapi/ServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../upload.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../upload.sh" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1305750770">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="15" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.23" value="1" />
-          <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.43" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.54" value="1" />
-          <entry key="project.open.time.55" value="1" />
-          <entry key="project.open.time.56" value="1" />
-          <entry key="project.open.time.59" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.62" value="1" />
-          <entry key="project.open.time.69" value="1" />
-          <entry key="project.open.time.78" value="1" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="16" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="2617" />
-          <entry key="scala" value="3451" />
-          <entry key="xml" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="2617" />
-          <entry key="Scala" value="3451" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="JSON" value="1" />
-          <entry key="class" value="2" />
-          <entry key="csv" value="3" />
-          <entry key="dat" value="3" />
-          <entry key="java" value="10" />
-          <entry key="properties" value="2" />
-          <entry key="scala" value="33" />
-          <entry key="xml" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="10" />
-          <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Properties" value="2" />
-          <entry key="Scala" value="33" />
-          <entry key="UML" value="1" />
-          <entry key="XML" value="2" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/LinkPostgresql.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2522">
-              <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
-              <folding>
-                <element signature="e#20#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/FastApriori.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="168" column="3" lean-forward="true" selection-start-line="168" selection-start-column="3" selection-end-line="169" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/Purchase.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
-              <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/Main.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/OutputRules.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="remote" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="remote" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="remote" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="wsa: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,45 +84,15 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>size</find>
-      <find>tojsonstring</find>
-      <find>购买</find>
-      <find>商品</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>选择</replace>
-      <replace>英雄</replace>
-    </replaceStrings>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/scriptFile.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/wangyi/App.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/wangyi/T.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/wangyi/Utils.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/wangyi/data/scriptFile.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/wangyi/scriptFile.scala" />
-        <option value="$PROJECT_DIR$/src/main/resources/scriptFile.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/wangyi/BIT.java" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/wangyi/Test.java" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/wangyi/AppTest.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/wangyi/Purchase.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/wangyi/Main.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/wangyi/LinkPostgresql.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/wangyi/FastApriori.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/wangyi/OutputRules.scala" />
-      </list>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -178,28 +101,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Dota2Analysis" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Dota2Analysis" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="70" />
-    <option name="y" value="360" />
-    <option name="width" value="1228" />
-    <option name="height" value="716" />
-  </component>
+  <component name="ProjectId" id="1bT5S1odfYwoSAjn55AwlbnAhb6" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -250,69 +155,22 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Dota2Analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dota2Analysis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Dota2Analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dota2Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Dota2Analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dota2Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Dota2Analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dota2Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Dota2Analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dota2Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Dota2Analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dota2Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="wangyi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Dota2Analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dota2Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550407755397" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -322,20 +180,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/scala/com/wangyi" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="AppTest" type="Application" factoryName="Application" temporary="true">
@@ -431,292 +278,59 @@
       <workItem from="1550372911182" duration="15405000" />
       <workItem from="1550556068502" duration="2604000" />
       <workItem from="1551141305637" duration="7018000" />
+      <workItem from="1588643243565" duration="3272000" />
+      <workItem from="1588817208891" duration="329000" />
+      <workItem from="1588817704114" duration="1212000" />
+      <workItem from="1589015913721" duration="4572000" />
+      <workItem from="1589080043595" duration="2097000" />
+      <workItem from="1589194251013" duration="1813000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87274000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="62" y="0" width="1862" height="1084" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.14878319" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31578946" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32947367" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Statistic" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32798672" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14878319" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31578946" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32947367" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Statistic" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32798672" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scriptFile.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/T.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/App.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/data/scriptFile.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/scriptFile.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/scriptFile.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/temp.dat" />
-    <entry file="jar://$USER_HOME$/下载/jdk1.8.0_181/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1248">
-          <caret line="666" lean-forward="true" selection-start-line="666" selection-end-line="666" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/下载/jdk1.8.0_181/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="822" column="11" selection-start-line="822" selection-start-column="11" selection-end-line="822" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/purchase.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="2" column="1532" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/wangyi/BIT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-sources.jar!/scala/Predef.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-sources.jar!/scala/collection/TraversableOnce.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="110" column="6" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/下载/jdk1.8.0_181/src.zip!/java/lang/Runtime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="658" column="23" selection-start-line="658" selection-start-column="23" selection-end-line="658" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/com/alibaba/fastjson/1.2.47/fastjson-1.2.47.jar!/META-INF/maven/com.alibaba/fastjson/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1482" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/com/alibaba/fastjson/1.2.47/fastjson-1.2.47.jar!/META-INF/maven/com.alibaba/fastjson/pom.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="uml://JAVA/com.alibaba.fastjson.JSON">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.alibaba.fastjson.JSON</OriginalElement>
-          <nodes>
-            <node x="" y="">com.alibaba.fastjson.JSONAware</node>
-            <node x="" y="">com.alibaba.fastjson.JSON</node>
-            <node x="" y="">com.alibaba.fastjson.JSONStreamAware</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="148.0" y="428.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/com/alibaba/fastjson/1.2.47/fastjson-1.2.47-sources.jar!/com/alibaba/fastjson/JSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2535">
-          <caret line="558" lean-forward="true" selection-start-line="558" selection-end-line="558" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/wangyi/AppTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/wangyi/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-sql_2.11/2.3.0/spark-sql_2.11-2.3.0-sources.jar!/org/apache/spark/sql/functions.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/temp.csv" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-sql_2.11/2.3.0/spark-sql_2.11-2.3.0-sources.jar!/org/apache/spark/sql/Dataset.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="681" column="6" selection-start-line="681" selection-start-column="6" selection-end-line="681" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-sql_2.11/2.3.0/spark-sql_2.11-2.3.0-sources.jar!/org/apache/spark/sql/DataFrameWriter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/Utils.scala" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-core_2.11/2.3.0/spark-core_2.11-2.3.0.jar!/org/apache/spark/SparkContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="166" column="6" selection-start-line="166" selection-start-column="6" selection-end-line="166" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-core_2.11/2.3.0/spark-core_2.11-2.3.0-sources.jar!/org/apache/spark/SparkContext.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="2323" column="6" selection-start-line="2323" selection-start-column="6" selection-end-line="2323" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/下载/jdk1.8.0_181/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-557">
-          <caret line="1924" column="18" selection-start-line="1924" selection-start-column="18" selection-end-line="1924" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/LinkPostgresql.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2522">
-          <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
-          <folding>
-            <element signature="e#20#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/Purchase.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/FastApriori.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="168" column="3" lean-forward="true" selection-start-line="168" selection-start-column="3" selection-end-line="169" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/wangyi/OutputRules.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="495" y="196" key="#Custom_Plugin_Repositories" timestamp="1588817544781">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="495" y="196" key="#Custom_Plugin_Repositories/0.23.1792.1017@0.23.1792.1017" timestamp="1588817544781" />
+    <state x="496" y="225" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588650701578">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="496" y="225" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1588650701578" />
+    <state x="623" y="370" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589016688091">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="623" y="370" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1589016688091" />
+    <state x="688" y="454" width="416" height="159" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1588817785133">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="688" y="454" width="416" height="159" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1588817785133" />
+    <state width="1750" height="303" key="GridCell.Tab.0.bottom" timestamp="1589300760391">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="303" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1589300760391" />
+    <state width="1750" height="303" key="GridCell.Tab.0.center" timestamp="1589300760390">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="303" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1589300760390" />
+    <state width="1750" height="303" key="GridCell.Tab.0.left" timestamp="1589300760390">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="303" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1589300760390" />
+    <state width="1750" height="303" key="GridCell.Tab.0.right" timestamp="1589300760391">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="303" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1589300760391" />
+    <state width="239" height="457" key="HiddenNamespacesPopup" timestamp="1588650707304">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="239" height="457" key="HiddenNamespacesPopup/0.0.1792.1120@0.0.1792.1120" timestamp="1588650707304" />
+    <state x="397" y="170" key="SettingsEditor" timestamp="1588817689526">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="397" y="170" key="SettingsEditor/0.23.1792.1017@0.23.1792.1017" timestamp="1588817689526" />
   </component>
   <component name="masterDetails">
     <states>

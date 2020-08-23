@@ -1,5 +1,6 @@
 package com.wangyi.dotaapi;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -7,6 +8,7 @@ import org.junit.Test;
  * @create 2018-12-12 10:07 PM
  **/
 
+@Ignore
 public class DotaTest {
 
     String deal(String attr){

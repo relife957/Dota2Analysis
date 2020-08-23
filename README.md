@@ -1,6 +1,14 @@
 # Dota2Analysis
 A data analysis of dota2
 
+
+## 更新 2020-04-30
+容器化服务，使用docker-compose将整个服务docker容器化
+使用  
+
+`docker-compose build`  
+`docker-compose up `  
+来运行
 ## 更新 2020-04-26
 
 - 全面更新内容，添加多项功能
@@ -26,7 +34,20 @@ A data analysis of dota2
 数据分析完毕后,数据存储在postgresql数据库,之前使用postgrest插件生成的api接口,现在自己写了一个,很简单的restful风格的数据接口,主要供前端vue.js使用
 
 #### 前端vue.js实现的简单界面
-为了将数据接口返回的数据完成可视化展示,我使用一个vue.js制作一个简单的前端界面,输入相关信息,返回对应推荐.暂时未上线
+为了将数据接口返回的数据完成可视化展示,我使用一个vue.js制作一个简单的前端界面,输入相关信息,返回对应推荐.
+
+## 界面
+### 推荐界面
+![推荐界面](./data/图片1.png)
+
+### 排行榜
+![排行榜](./data/图片2.png)
+
+### 历史查询
+![历史查询](./data/图片3.png)
+
+### 接口文档
+![接口文档](./data/图片4.png)
 
 ## tips 
 具体的代码分析马上会提供具体的博客说明

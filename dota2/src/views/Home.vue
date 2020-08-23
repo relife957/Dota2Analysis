@@ -3,7 +3,7 @@
     <div class="welcome" />
     <ul>
       <li style="font-size: 1.3em; font-style: oblique 40deg;">
-        <p>这是一个实现了Dota2内置的基于大数据分析的阵容推荐的网页版</p>
+        <p>Dota2内置的基于大数据分析的阵容推荐的网页版</p>
       </li>
       <li>
         <a-carousel arrows autoplay>
